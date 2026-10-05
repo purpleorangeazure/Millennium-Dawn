@@ -18,11 +18,8 @@ from pathlib import Path
 import fix_styling
 import pytest
 from fix_styling import fix_file, fix_file_dry_run, fix_line
-
-
-def _write(path, content):
-    with open(path, "w", encoding="utf-8", newline="") as handle:
-        handle.write(content)
+from shared.suite import prevent_commit_signing_during_tests
+from shared.suite import write_text as _write
 
 
 def _run_main(monkeypatch, *argv):
