@@ -1504,12 +1504,6 @@ POL_visegrad_unification_category = {
 				min = 0
 				max = 100
 			}
-			add_to_variable = { THIS.support = 10 }
-			clamp_variable = {
-				var = THIS.support
-				min = 0
-				max = 100
-			}
 			custom_effect_tooltip = POL_add_10_CZE_support_TT
 		}
 
@@ -1539,12 +1533,6 @@ POL_visegrad_unification_category = {
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision POL_military_funding"
-			add_to_variable = { THIS.support = 10 }
-			clamp_variable = {
-				var = THIS.support
-				min = 0
-				max = 100
-			}
 			add_to_variable = { THIS.support = 10 }
 			clamp_variable = {
 				var = THIS.support
@@ -1585,12 +1573,6 @@ POL_visegrad_unification_category = {
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision POL_support_economy"
-			add_to_variable = { THIS.support = 15 }
-			clamp_variable = {
-				var = THIS.support
-				min = 0
-				max = 100
-			}
 			add_to_variable = { THIS.support = 15 }
 			clamp_variable = {
 				var = THIS.support
@@ -1679,12 +1661,6 @@ POL_visegrad_unification2_category = {
 				min = 0
 				max = 100
 			}
-			add_to_variable = { THIS.support2 = 10 }
-			clamp_variable = {
-				var = THIS.support2
-				min = 0
-				max = 100
-			}
 			custom_effect_tooltip = POL_add_10_SLO_support_TT
 		}
 
@@ -1711,12 +1687,6 @@ POL_visegrad_unification2_category = {
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision POL_support_for_industry_research"
-			add_to_variable = { THIS.support2 = 10 }
-			clamp_variable = {
-				var = THIS.support2
-				min = 0
-				max = 100
-			}
 			add_to_variable = { THIS.support2 = 10 }
 			clamp_variable = {
 				var = THIS.support2
@@ -1765,12 +1735,6 @@ POL_visegrad_unification2_category = {
 				min = 0
 				max = 100
 			}
-			add_to_variable = { THIS.support2 = 10 }
-			clamp_variable = {
-				var = THIS.support2
-				min = 0
-				max = 100
-			}
 			SLO = {
 				add_tech_bonus = {
 					name = POL_support_for_military_research
@@ -1808,12 +1772,6 @@ POL_visegrad_unification2_category = {
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision POL_military_exercises"
-			add_to_variable = { THIS.support2 = 20 }
-			clamp_variable = {
-				var = THIS.support2
-				min = 0
-				max = 100
-			}
 			add_to_variable = { THIS.support2 = 20 }
 			clamp_variable = {
 				var = THIS.support2
@@ -1881,12 +1839,6 @@ POL_visegrad_unification3_category = {
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision POL_political_speech3"
-			add_to_variable = { THIS.support3 = 5 }
-			clamp_variable = {
-				var = THIS.support3
-				min = 0
-				max = 100
-			}
 			add_to_variable = { THIS.support3 = 5 }
 			clamp_variable = {
 				var = THIS.support3
@@ -1991,12 +1943,6 @@ POL_visegrad_unification3_category = {
 				min = 0
 				max = 100
 			}
-			add_to_variable = { THIS.support3 = 25 }
-			clamp_variable = {
-				var = THIS.support3
-				min = 0
-				max = 100
-			}
 			HUN = {
 				add_opinion_modifier = {
 					target = POL
@@ -2074,40 +2020,6 @@ POL_visegrad_unification4_category = {
 
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision POL_visegrad_breakup"
-			release = CZE
-			release = HUN
-			release = SLO
-			remove_ideas = {
-				POL_united_visehgrad_idea
-				POL_united_visegrad2_idea
-				POL_united_visegrad3_idea
-				POL_united_visegrad4_idea
-				POL_viser_idea
-			}
-			if = {
-				limit = {
-					NOT = {
-						OR = {
-							has_global_flag = GAME_RULE_nato_disabled
-							USA = {
-								OR = {
-									has_war_with = CZE
-									has_war_with = HUN
-								}
-							}
-						}
-					}
-				}
-				USA = {
-					add_to_faction = CZE
-					add_to_faction = HUN
-				}
-			}
-			if = {
-				limit = { SLO = { has_idea = NATO_member } }
-				USA = { add_to_faction = SLO }
-			}
-			add_stability = -0.3
 			release = CZE
 			release = HUN
 			release = SLO
@@ -4163,7 +4075,7 @@ POL_moon_launch_mission = {
 		visible = {
 			NOT = {
 				OR = {
-					has_decision = POL_cooperation_with_nasa
+					has_decision = POL_cooperation_with_roscosmos
 					has_decision = POL_cooperation_with_cnes
 					has_country_flag = POL_rosc
 					has_country_flag = POL_cnes
